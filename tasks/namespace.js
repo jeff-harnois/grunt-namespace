@@ -37,9 +37,8 @@ module.exports = function(grunt) {
     // send unprocessed file.src object to namespace, it will extract css and tpl as it needs
     var files = this.file.src,
         dest = this.file.dest,
-        filepath = dest.lastIndexOf("/"),
-        folder = filepath(0, filepath),
-        namespace = folder.slice(0,filepath.length - 14);
+        filepath = dest.replace("Apps/dist/",""),
+        namespace = filepath.replace("/debug/js/namespace.js","");
 
     grunt.file.write(dest, grunt.helper('namespace', files, namespace));
 
