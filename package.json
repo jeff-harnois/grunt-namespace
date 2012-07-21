@@ -1,0 +1,40 @@
+{
+  "name": "grunt-namespace",
+  "description": "Add a namespace to a file.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/reputation/grunt-namespace",
+  "author": {
+    "name": "Jeff Harnois",
+    "email": "jeff.harnois@reputation.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reputation/grunt-namespace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reputation/grunt-namespace/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/reputation/grunt-namespace/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "grunt.js",
+  "bin": "bin/grunt-namespace",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "grunt": "~0.3.9"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.9"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
