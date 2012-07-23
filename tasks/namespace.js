@@ -36,9 +36,11 @@ module.exports = function(grunt) {
     
     // send unprocessed file.src object to namespace, it will extract css and tpl as it needs
     var files = this.file.src,
-        dest = this.file.dest,
-        filepath = dest.replace("Apps/dist/",""),
-        namespace = filepath.replace("/debug/js/namespace.js","");
+        dest = this.file.dest;
+        namespace = '';
+    dest = dest.replace("../Assets/","");
+    dest = dest.replace("Apps/dist/","");
+    namespace = dest.replace("/debug/js/namespace.js","");
 
     grunt.file.write(dest, grunt.helper('namespace', files, namespace));
 
@@ -48,6 +50,7 @@ module.exports = function(grunt) {
     // 
     // // Otherwise, print a success message.
     log.writeln('File "' + this.file.dest + '" created.');
+    return true;
   });
 
   // ==========================================================================
