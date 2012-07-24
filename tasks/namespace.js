@@ -41,8 +41,10 @@ module.exports = function(grunt) {
     dest = dest.replace("../Assets/","");
     dest = dest.replace("Apps","");
     dest = dest.replace("dist","");
-    dest = dest.replace("/","");
     namespace = dest.replace("/debug/js/namespace.js","");
+    namespace = namespace.replace("//","");
+    namespace = namespace.replace("/","");
+    log.writeln('namespace is '+namespace);
 
     grunt.file.write(this.file.dest, grunt.helper('namespace', files, namespace));
 
